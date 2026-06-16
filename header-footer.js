@@ -198,6 +198,7 @@ function injectDynamicContent() {
 function createMapWidget() {
   const mapSection = document.querySelector('.map-grid');
   if (!mapSection) return;
+  if (mapSection.querySelector('.map-item, iframe')) return; // Existing map markup already present
 
   const wrapper = document.createElement('div');
   wrapper.className = 'custom-map-card';
