@@ -1,28 +1,161 @@
 /* =========================================================
-   GLOBAL STYLES
+   GLOBAL STYLES & ANIMATIONS
    ========================================================= */
+
+/* Full-screen page load animation */
+@keyframes pageLoadFadeIn {
+  from {
+    opacity: 0;
+    background-color: #fdfaf6;
+  }
+  to {
+    opacity: 1;
+    background-color: #fdfaf6;
+  }
+}
+
+/* Full-screen animated gradient background */
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(135deg, #fdfaf6 0%, #f5e6d3 50%, #e8d4c0 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c0 50%, #fdfaf6 100%);
+  }
+  100% {
+    background: linear-gradient(135deg, #fdfaf6 0%, #f5e6d3 50%, #e8d4c0 100%);
+  }
+}
+
+/* Slide-in from top */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-in from bottom */
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-in from left */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide-in from right */
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale and fade in */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse effect */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #fdfaf6;
   color: #333;
+  animation: pageLoadFadeIn 0.8s ease-in-out, gradientShift 8s ease-in-out infinite;
+  background-size: 200% 200%;
 }
 
 /* Headings */
 h1 {
   color: #2c3e50; /* Dark navy for main headings */
+  animation: slideInFromTop 0.8s ease-out 0.2s both;
 }
 
 h2 {
   color: #8b5e3c; /* Warm brown for sub-headings */
+  animation: slideInFromLeft 0.8s ease-out 0.3s both;
 }
 
 h3, h4 {
   color: #d35400; /* Burnt orange for smaller headings */
+  animation: slideInFromLeft 0.8s ease-out both;
 }
 
 p, li {
   line-height: 1.6;
+  animation: slideInFromLeft 0.8s ease-out both;
+}
+
+li {
+  margin: 8px 0;
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  animation: float 0.4s ease-in-out;
+  padding-left: 10px;
+  color: #2b6cb0;
 }
 
 /* Navigation */
@@ -41,6 +174,7 @@ header {
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
   padding: 20px;
+  animation: slideInFromBottom 0.8s ease-out both;
 }
 
 header .header-container {
@@ -97,6 +231,7 @@ nav {
   background-color: #3a2e1f;
   padding: 12px 15px;
   text-align: center;
+  animation: slideInFromTop 0.8s ease-out both;
 }
 
 nav a {
@@ -106,6 +241,8 @@ nav a {
   font-weight: bold;
   padding: 10px 12px;
   border-radius: 8px;
+  animation: slideInFromLeft 0.8s ease-out both;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
@@ -120,6 +257,7 @@ nav a:hover {
   position: relative;
   min-height: 80vh;
   overflow: hidden;
+  animation: slideInFromTop 1s ease-out both;
 }
 
 .hero-img {
@@ -127,6 +265,7 @@ nav a:hover {
   height: 100%;
   object-fit: cover;
   display: block;
+  animation: scaleIn 1.5s ease-out both;
 }
 
 .hero-overlay {
@@ -138,6 +277,7 @@ nav a:hover {
   text-align: center;
   z-index: 1;
   width: min(90%, 700px);
+  animation: slideInFromBottom 1s ease-out 0.5s both;
 }
 
 .hero-overlay h1,
@@ -178,6 +318,20 @@ nav a:hover {
   margin: 20px auto;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   max-width: 800px;
+  animation: slideInFromBottom 0.8s ease-out both;
+  transition: all 0.3s ease;
+}
+
+.home-card:hover,
+.about-card:hover,
+.team-card:hover,
+.service-card:hover,
+.contact-card:hover,
+.donate-card:hover,
+.volunteer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  animation: float 0.6s ease-in-out infinite;
 }
 
 .home-card img,
@@ -190,6 +344,7 @@ nav a:hover {
   width: 100%;
   border-radius: 8px;
   display: block;
+  animation: scaleIn 0.8s ease-out both;
 }
 
 /* =========================================================
@@ -225,6 +380,17 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-family: 'Arial', sans-serif;
+  animation: slideInFromLeft 0.8s ease-out both;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #27ae60;
+  box-shadow: 0 0 8px rgba(39, 174, 96, 0.3);
+  animation: pulse 0.6s ease-in-out;
 }
 
 /* Buttons */
@@ -236,11 +402,13 @@ form button {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: slideInFromBottom 0.8s ease-out both;
 }
 
 form button:hover {
   background-color: #2ecc71; /* Lighter green on hover */
   transform: scale(1.05);
+  animation: float 0.6s ease-in-out infinite;
 }
 
 /* =========================================================
@@ -251,16 +419,19 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+  animation: slideInFromBottom 0.8s ease-out both;
 }
 
 footer a {
   color: #d4a373;
   text-decoration: none;
   transition: color 0.3s ease;
+  animation: slideInFromLeft 0.8s ease-out both;
 }
 
 footer a:hover {
   color: #f39c12;
+  animation: pulse 0.6s ease-in-out;
 }
 
 details {
@@ -270,6 +441,8 @@ details {
   border-radius: 12px;
   background: #fff;
   padding: 10px 16px;
+  animation: slideInFromLeft 0.8s ease-out both;
+  transition: all 0.3s ease;
 }
 
 details summary {
@@ -281,6 +454,13 @@ details summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  animation: slideInFromLeft 0.8s ease-out both;
+  transition: all 0.3s ease;
+}
+
+details summary:hover {
+  color: #2b6cb0;
+  animation: float 0.4s ease-in-out;
 }
 
 details summary::marker {
@@ -292,20 +472,17 @@ details summary::before {
   margin-right: 12px;
   font-size: 1rem;
   color: #8b5e3c;
+  transition: all 0.3s ease;
 }
 
 details[open] summary::before {
   content: "▲";
-}
-
-.details-hint {
-  font-size: 0.9rem;
-  color: #7a6a59;
-  font-weight: 400;
+  animation: slideInFromTop 0.3s ease-out both;
 }
 
 details[open] {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  animation: pulse 0.4s ease-in-out;
 }
 
 details {
@@ -367,6 +544,7 @@ body {
 
 main {
   flex: 1;
+  animation: slideInFromBottom 0.9s ease-out 0.3s both;
 }
 
 section,
@@ -375,11 +553,28 @@ article,
 form {
   max-width: 1100px;
   margin: 0 auto;
+  animation: scaleIn 0.8s ease-out both;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  animation: scaleIn 0.8s ease-out both;
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+a {
+  transition: all 0.3s ease;
+  animation: slideInFromLeft 0.8s ease-out both;
+}
+
+a:hover {
+  animation: pulse 0.4s ease-in-out;
 }
 
 .team-grid,
