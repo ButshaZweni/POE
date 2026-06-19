@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Kizuna Alliance</title>
+  <meta name="description" content="Contact Kizuna Alliance for support, donations, volunteering, or program inquiries. Send a message, view offices, or find our locations.">
+  <meta name="keywords" content="contact, Kizuna Alliance, nonprofit, support, volunteering, donate, enquiry, community help">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<header class="header-container card">
+    <h1>Kizuna Alliance</h1>
+    <p><em>Standing Together in Humanitarian and Community Engagement</em></p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="service.html">Service</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contactus.html">Contact</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="donate.html">Donate</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+<main>
+  <section class="contact-page">
+    <div class="contact-grid">
+
+      <!-- Contact Form -->
+      <div class="contact-card big-card">
+        <h2>Send Us a Message</h2>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+27 123 456 789" required>
+
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+
+          <label for="subject">Subject:</label>
+          <select id="subject" name="subject" required>
+            <option value="general">General Inquiry</option>
+            <option value="support">Support</option>
+            <option value="feedback">Feedback</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Offices -->
+      <div class="contact-card big-card">
+        <h2>Our Offices</h2>
+        <p><strong>Head Office:</strong> 123 Rose Street</p>
+        <p><strong>Outreach Center:</strong> 45 Hope Avenue, Port Elizabeth</p>
+        <p><strong>Phone:</strong> +27 41 123 4567</p>
+        <p><strong>Phone:</strong> +27 54 6832 4567</p>
+        <p><strong>Email:</strong> info@kizunaalliance.org</p>
+      </div>
+
+      <!-- Maps -->
+      <div class="contact-card big-card">
+        <h2>Find Us</h2>
+        <div class="map-grid">
+          <div class="map-item">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.531949430593!2d25.638765176313676!3d-33.798583015426416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7b2a95f7236941%3A0xd129e5810d300449!2sAuto%20King%20Used%20Car%20Spares!5e0!3m2!1sen!2sza!4v1780502541063!5m2!1sen!2sza" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p><strong>Head Office</strong></p>
+          </div>
+          <div class="map-item">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.531949430593!2d25.638765176313676!3d-33.798583015426416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7b2abc5c9bf64f%3A0x828904d18dee6a6a!2sGRAIN%20CARRIERS%20PE!5e0!3m2!1sen!2sza!4v1780502704128!5m2!1sen!2sza" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p><strong>Outreach Center</strong></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+  <footer class="footer-container card">
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="https://facebook.com/KizunaAlliance" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://instagram.com/KizunaAlliance" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="service.html">Service</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contactus.html">Contact</a>
+      <a href="donate.html">Donate</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <p>&copy; 2023-2026 | Kizuna Alliance.</p>
+  </footer>
+  <script src="header-footer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="emailjs-form.js"></script>
+</body>
+</html>
