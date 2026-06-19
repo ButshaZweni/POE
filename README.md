@@ -80,16 +80,6 @@ Key features:
 
 ## Getting Started
 
-### How to View Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ButshaZweni/POE.git
-   cd POE
-   ```
-2. Open `index.html` in your browser to view the home page.
-3. Use the navigation menu to browse all pages and features.
-4. Try the login page by clicking "Login" in the header or footer.
 
 ### Testing Interactive Features
 
