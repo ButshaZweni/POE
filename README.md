@@ -2,6 +2,8 @@
 
 A static nonprofit website for Kizuna Alliance, built with **HTML5, CSS3, and vanilla JavaScript**. The site presents the organization's mission, services, volunteer opportunities, donation options, and contact details with responsive design, interactive elements, accessibility features, and modern UX patterns.
 
+See [SKILLS.md](SKILLS.md) for the full skills reference and assessment criteria mapping.
+
 ## 🎯 Project Overview
 
 This website showcases a community-focused organization with a complete interactive experience:
