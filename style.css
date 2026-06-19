@@ -294,14 +294,6 @@ nav a:hover {
   margin-bottom: 1.25rem;
 }
 
-.hero-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 0;
-}
-
 /* =========================================================
    CARD STYLES (for images only)
    ========================================================= */
