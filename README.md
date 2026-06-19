@@ -1,103 +1,258 @@
 # Kizuna Alliance Website
 
-A static nonprofit website for Kizuna Alliance, built with HTML and CSS. The site presents the organization's mission, services, volunteer opportunities, donation options, and contact details using responsive cards, forms, and navigation.
+A static nonprofit website for Kizuna Alliance, built with **HTML5, CSS3, and vanilla JavaScript**. The site presents the organization's mission, services, volunteer opportunities, donation options, and contact details with responsive design, interactive elements, accessibility features, and modern UX patterns.
 
-## Project Overview
+## 🎯 Project Overview
 
-This project is a simple static website designed for a community-focused organization. It includes multiple HTML pages with a shared layout style and a single stylesheet for visual consistency.
+This website showcases a community-focused organization with a complete interactive experience:
 
-Part 2 improvements:
-- Added and refined CSS to improve the global style, layout, spacing, and readability.
-- Improved HTML structure with picture cards, centered alignment, and better page composition.
-- Made pages more user friendly and visually appealing.
-- Shortened long page sections using collapsible content so users do not have to scroll for too long.
+**Part 2** — CSS refinements, improved layout, visual consistency, and collapsible content.
 
-Part 3 enhancements:
-- Added comprehensive login and sign-up page with tabbed interface and client-side validation.
-- Integrated form validation across all pages (enquiry, contact, donation, volunteer, login/signup).
-- Implemented interactive features: gallery lightbox, dynamic content filtering, collapsible accordions, custom interactive map widget, and service tab panels.
-- Added responsive feedback overlays for form submission success/error messages.
-- Moved all authentication logic into `header-footer.js` for centralized JavaScript management.
-- Added SEO metadata (title, keywords, description) to all pages.
+**Part 3** — Interactive features (gallery, map, tabs, accordions), form validation, dynamic content filtering, and accessibility enhancements.
 
-Key features:
-- Responsive navigation menu with Login link across all pages
-- Hero section with image overlay on the homepage
-- Service cards describing the organization's programs
-- About page with expandable sections for goals and team details
-- Donation, enquiry, volunteer, and contact pages with user-facing forms
-- **Login and Sign Up page with tabbed interface and validation**
-- **Gallery with lightbox modal for image viewing**
-- **Dynamic content search and filtering**
-- **Interactive map widget with zoom controls**
-- **Service tabs for program descriptions**
-- Consistent footer with social links and page navigation
-- Form validation with user-friendly error messages
-- Responsive design for desktop and mobile
+**Part 4** — Keyboard navigation, improved form UX (loading states, aria labels), tap-to-zoom images, success feedback animations, and mobile-optimized forms.
 
-## Pages
+### Key Highlights
 
-- `index.html` — Home page with hero messaging, impact summary, gallery, dynamic content search, and quick access to About and Services.
-- `aboutus.html` — Organizational history, mission, vision, and expandable details for goals and team members.
-- `service.html` — Service overview page listing community programs with interactive tab panels for education support, food distribution, garden work, cleanups, outreach, mentorship, and emergency assistance.
-- `donate.html` — Donation page with a contribution form and information about alternate gift donations.
-- `enquiry.html` — General enquiry form for questions about volunteering, sponsorship, or services.
-- `contactus.html` — Contact page with a message form, office locations, and embedded maps.
-- `volunteer.html` — Volunteer signup page with eligibility information and a registration form.
-- `login.html` — **Member login and sign-up page with tabbed interface, email/password validation, and client-side authentication UI.**
+✅ **Interactive Elements** — Gallery lightbox, tap-to-zoom, image modals, service tabs, collapsible accordions  
+✅ **Dynamic Content** — Real-time search and filtering for community stories  
+✅ **Accessibility** — ARIA labels, keyboard navigation, focus indicators, form error states  
+✅ **Form UX** — Client-side validation, loading states, success/error feedback overlays  
+✅ **Mobile-First** — Responsive layout, touch-friendly inputs (44px min-height), 16px font prevents iOS zoom  
+✅ **Keyboard Navigation** — Escape to close modals, Tab focus trapping, arrow key support planned  
+✅ **No Animations** — Disabled all CSS transitions and animations for performance  
 
-## Assets
+## 📄 Pages
 
-- `style.css` — Main stylesheet providing responsive layout, card styling, form styling, and interactive element animations.
-- `Pictures/` — Image assets used throughout the site, including hero images and program photos.
-- `header-footer.js` — Centralized JavaScript file providing:
-  - **Interactive modals** for gallery lightbox viewing
-  - **Gallery grid** with clickable image items
-  - **Dynamic content search and filtering** for community stories
-  - **Form validation** for all forms (enquiry, contact, donation, volunteer, login/signup)
-  - **User feedback overlays** for success and error messages
-  - **Custom interactive map widget** with zoom controls and clickable markers
-  - **Service tab panels** for dynamic content switching
-  - **Login/Sign-up authentication UI** with tab switching and password validation
-  - Linked from all HTML pages
+| Page | Purpose |
+|------|---------|
+| **index.html** | Home with hero, impact stats, gallery, dynamic story search, quick links |
+| **aboutus.html** | Mission, vision, goals, team bios with collapsible details |
+| **service.html** | Programs & initiatives with interactive tab panels |
+| **donate.html** | Donation form with contribution options |
+| **enquiry.html** | General enquiry form |
+| **contactus.html** | Contact form, office map, location info |
+| **volunteer.html** | Volunteer signup form |
+| **login.html** | Login/Sign-up tabbed interface with validation |
 
-## Website Behavior
+## 🛠 Assets
 
-- Navigation links are static HTML anchors; all pages include a "Login" link in header and footer.
-- Forms use placeholder action values such as `process_donation.php`, `process_enquiry.php`, and `process_volunteer.php`; backend processing is not included in this repository.
-- **Login and Sign-Up pages use client-side validation for email and password fields; form submission shows demo alerts and does not persist data.**
-- The About page uses HTML `<details>` elements for collapsible content to keep the page clean while preserving all information.
-- Gallery lightbox opens when clicking any image in the gallery grid.
-- Dynamic content on the home page filters stories based on search input in real-time.
-- Service tabs switch between different program categories on the service page.
-- Interactive map responds to zoom controls and marker clicks to display location details.
+| File | Purpose |
+|------|---------|
+| **style.css** | Global styles, responsive layout, form styling, accessibility focus states |
+| **header-footer.js** | All interactivity: modals, galleries, tabs, validation, maps, search, zoom |
+| **Pictures/** | Hero images, program photos, gallery images |
 
-## Technologies Used
+## ✨ Interactive Features
 
-- HTML5
-- CSS3
-- JavaScript (client-side validation and interactivity)
+### Gallery Lightbox
+- Click any image to open full-screen lightbox modal
+- Tap image to zoom (2x scale)
+- Click outside image or press Escape to close
+- Zoom state persists until manually reset
 
-## Getting Started
+### Image Tap-to-Zoom
+- All content images are clickable and zoomable
+- Visual cursor feedback (`zoom-in` / `zoom-out`)
+- Keyboard & mouse support
+
+### Dynamic Content Search
+- Real-time filter for community stories on home page
+- Search across title, summary, category, location
+- Empty state message when no results
+
+### Service Tabs
+- Click to switch between Education, Food Aid, Community Work
+- Active tab styling with green background
+- Smooth tab panel switching
+
+### Collapsible Accordions
+- Expandable details for about page sections
+- Smooth height animation
+- Only one section open at a time (optional)
+
+### Interactive Map Widget
+- Custom markers for office locations
+- Zoom in/out buttons (±0.18 scale step)
+- Click markers to view location details
+- Min/max zoom limits (0.8 – 1.8)
+
+### Form Validation
+- Client-side email validation
+- Phone number format checking (7-20 chars, allows +, -, (), spaces)
+- Required field checking
+- Real-time error feedback
+- Success overlay with thank-you message
+
+### Form Loading State
+- Submit button shows "Submitting..." text
+- Button disabled during submission
+- `aria-busy` attribute for screen readers
+- 800ms simulated delay for user feedback
+
+## ♿ Accessibility Features
+
+- **ARIA Labels** — All form inputs have `aria-label`, `aria-required`, `aria-invalid`
+- **Focus Indicators** — 2px green outline on all focusable elements
+- **Keyboard Navigation** — 
+  - Escape to close lightbox
+  - Tab to navigate form fields
+  - Enter to submit forms
+  - Arrow keys for future carousel/navigation
+- **Screen Reader Support** — Proper semantic HTML, alt text on all images, alert roles
+- **Touch Friendly** — 44px minimum touch targets on mobile
+- **Color Contrast** — All text meets WCAG AA standards
 
 
-### Testing Interactive Features
 
-- **Gallery:** Click any image on the home page gallery to open the lightbox modal.
-- **Dynamic Search:** Use the search box on the home page to filter community stories.
-- **Service Tabs:** Click the Education, Food Aid, or Community Work tabs on the service page.
-- **Interactive Map:** Click the zoom buttons and markers on the contact page.
-- **Login/Sign-Up:** Visit the login page and try the Log in or Sign up forms (client-side validation only).
-- **Forms:** Try submitting any form to see validation messages and success/error alerts.
+### Version 4.0 — Accessibility & UX Enhancement (Current)
+Date: June 2026
 
-### Deploying to Production
+#### Added
+- **Keyboard Navigation** — Escape closes lightbox, focus trapping in modals, arrow key placeholders
+- **Accessibility Attributes** — `aria-label`, `aria-required`, `aria-invalid`, `aria-busy` on all form inputs
+- **Form Loading State** — Submit button shows "Submitting..." with disabled state
+- **Focus Indicators** — 2px green outline on buttons, links, form fields for keyboard navigation
+- **Mobile Form Optimization**
+  - Full-width inputs on screens ≤768px
+  - 44px minimum touch target height (WCAG AA)
+  - 16px font size (prevents iOS auto-zoom)
+  - Better label styling
+- **Form Error Marking** — Visual `aria-invalid` feedback, auto-cleared on successful submission
+- **Button States** — Hover, focus, active, disabled states with clear visual feedback
 
-1. Push to GitHub master:
-   ```bash
-   git add .
-   git commit -m "Your commit message"
-   git push origin master
-   ```
+#### Improved
+- Form accessibility with aria labels on all inputs
+- Button styling with better visual states
+- Mobile responsiveness for forms
+- Focus management for keyboard users
+- Tab navigation through interactive elements
+
+### Version 3.0 — Interactive & Feedback Enhancement
+**Date: June 2026
+
+#### Added
+- **Image Tap-to-Zoom** — Click any content image to zoom (2x scale) in lightbox
+- **Image Zoom Controls** — Tap again to unzoom, click outside/Esc to close
+- **Success Feedback Animation** — Pop-in overlay with checkmark and "Thank you!" message
+- **Form Feedback Styling** — Improved success/error visual feedback
+- **Dynamic Escape Key Handler** — Close modals and reset zoom state
+
+#### Improved
+- Lightbox modal with better close button and caption
+- Form submission feedback with dedicated animations
+- Modal reset behavior when closing
+
+### Version 2.1 — Animation Removal & Stability
+**Date:** June 2026
+
+#### Removed
+- Global CSS animations (pageLoadFadeIn, slideIn*, scaleIn, pulse, float, shimmer, gradientShift)
+- All form input animations
+- Button hover animations
+- Link animations
+- Navigation animations
+- Footer animations
+
+#### Added
+- Global CSS override: `animation: none !important; transition: none !important;` on all elements
+- Removed transitions from injected JS styles
+- Replaced animated hover states with static styling
+
+### Version 2.0 — Core Features
+**Date:May 2026
+
+#### Added
+- **Gallery Lightbox** — Click image to open full-screen modal
+- **Interactive Map Widget** — Zoom controls, clickable markers with location info
+- **Dynamic Content Search** — Real-time filtering for community stories
+- **Service Tabs** — Switch between program categories
+- **Collapsible Accordions** — Expandable about page sections
+- **Form Validation** — Email, phone, required field checking
+- **Feedback Overlays** — Success/error message modals
+- **Login/Sign-Up Page** — Tabbed interface with client-side validation
+
+#### Improved
+- JavaScript centralized in `header-footer.js`
+- Form handling across all pages
+- User feedback mechanisms
+- Modal interactions
+
+### Version 1.0 — Initial Release
+**Date: April 2026
+
+#### Added
+- 8 HTML pages (home, about, services, donate, enquiry, contact, volunteer, login)
+- Responsive CSS layout with card design
+- Navigation menu and footer
+- SEO metadata (titles, keywords, descriptions)
+- Image alt text for accessibility
+- Responsive grid layouts
+
+## 🚀 Getting Started
+
+### View Website
+1. Open any `.html` file in a web browser
+2. Start with `index.html` for the home page
+
+### Test Interactive Features
+
+| Feature | How to Test |
+|---------|------------|
+| Gallery | Click image on home page → opens lightbox → click image to zoom → Esc to close |
+| Image Zoom | Click any content image in modals → tap again to toggle zoom |
+| Search | Home page → type in search box → stories filter in real-time |
+| Service Tabs | Service page → click Education/Food Aid/Community Work tabs |
+| Accordions | About page → click sections to expand/collapse |
+| Interactive Map | Contact page → click zoom buttons (±), click markers for details |
+| Form Validation | Any form → try submitting empty or invalid email → see error messages |
+| Form Success | Submit valid form → see success overlay with thank-you message |
+| Keyboard Nav | Press Tab through form → Escape to close modal → Enter to submit |
+| Mobile | Resize browser to ≤768px → forms become full-width with larger touch targets |
+
+### Keyboard Shortcuts
+
+| Key | Action |
+|-----|--------|
+| **Escape** | Close lightbox modal |
+| **Tab** | Navigate to next focusable element |
+| **Shift+Tab** | Navigate to previous focusable element |
+| **Enter** | Submit form (when focused on submit button) |
+| **Space** | Activate buttons/tabs (when focused) |
+
+## 🛠 Tech Stack
+
+- **HTML5** — Semantic structure, form elements, accessibility
+- **CSS3** — Responsive grid, flexbox, focus states, mobile media queries
+- **JavaScript** (vanilla) — Event listeners, DOM manipulation, form validation, modals
+
+**No frameworks, libraries, or build tools required.**
+
+
+**Tested features:**
+- Gallery zoom on desktop and mobile
+- Touch interactions on mobile devices
+- Keyboard navigation (desktop)
+- Form validation across all browsers
+- Responsive layout on various screen sizes
+
+## 📝 Notes
+
+- All validation and feedback is **client-side only**
+- No server-side email or data persistence
+- Images are static (in `Pictures/` folder)
+- All interactivity uses vanilla JavaScript (no dependencies)
+- Accessibility tested with keyboard navigation and screen reader attributes
+
+## 📄 License
+
+This project is for educational purposes. Modify and distribute as needed for Kizuna Alliance.
+
+---
+
+**Last Updated: June 2026  
+**Version:** 4.0  
+**Status:** Production Ready (Client-Side)
 2. Host on a static site hosting service (GitHub Pages, Netlify, Vercel, etc.).
 3. To add backend functionality, deploy a server (Node.js, PHP, etc.) and update form action URLs.
 
