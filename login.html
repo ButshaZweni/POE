@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login - Kizuna Alliance</title>
+  <meta name="description" content="Login to access volunteer and donor features for Kizuna Alliance.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header-container card">
+    <h1>Kizuna Alliance</h1>
+    <p><em>Standing Together in Humanitarian and Community Engagement</em></p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="service.html">Service</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contactus.html">Contact</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="donate.html">Donate</a>
+      <a href="login.html" aria-current="page">Login</a>
+    </nav>
+  </header>
+
+  <main class="card" style="max-width:520px;margin:2rem auto;padding:1.5rem;">
+    <h2>Account</h2>
+    <p>Log in or create an account to manage volunteering and donations.</p>
+
+    <div class="auth-tabs" style="display:flex;gap:0.5rem;margin:1rem 0;border-radius:8px;overflow:hidden;">
+      <button id="tabLogin" class="tab active" style="flex:1;padding:0.6rem 0;border:none;background:#2b6cb0;color:#fff;cursor:pointer;">Log in</button>
+      <button id="tabSignup" class="tab" style="flex:1;padding:0.6rem 0;border:none;background:#f3f4f6;color:#111;cursor:pointer;">Sign up</button>
+    </div>
+
+    <form id="loginForm" action="#" method="post" autocomplete="on" style="display:block;">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.org">
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required minlength="6" placeholder="••••••">
+
+      <div style="margin-top:1rem;display:flex;gap:0.5rem;align-items:center;">
+        <button type="submit">Log in</button>
+        <a href="enquiry.html" style="margin-left:auto">Need help?</a>
+      </div>
+    </form>
+
+    <form id="signupForm" action="#" method="post" autocomplete="on" style="display:none;">
+      <label for="signup-name">Full name</label>
+      <input id="signup-name" name="name" type="text" required placeholder="Your full name">
+
+      <label for="signup-email">Email</label>
+      <input id="signup-email" name="email" type="email" required placeholder="you@example.org">
+
+      <label for="signup-password">Password</label>
+      <input id="signup-password" name="password" type="password" required minlength="6" placeholder="At least 6 characters">
+
+      <label for="signup-password2">Confirm password</label>
+      <input id="signup-password2" name="password2" type="password" required placeholder="Repeat password">
+
+      <div style="margin-top:1rem;display:flex;gap:0.5rem;align-items:center;">
+        <button type="submit">Create account</button>
+        <a href="enquiry.html" style="margin-left:auto">Privacy & help</a>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer-container card">
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="https://facebook.com/KizunaAlliance" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://instagram.com/KizunaAlliance" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="service.html">Service</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contactus.html">Contact</a>
+      <a href="donate.html">Donate</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <p>&copy; 2023-2026 | Kizuna Alliance.</p>
+  </footer>
+
+  <script src="header-footer.js"></script>
+</body>
+</html>

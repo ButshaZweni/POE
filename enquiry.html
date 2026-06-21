@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry - Kizuna Alliance</title>
+  <meta name="description" content="Submit a general enquiry to Kizuna Alliance. Ask about volunteering, sponsorship, services, or community programs and get a fast response.">
+  <meta name="keywords" content="enquiry, Kizuna Alliance, volunteer support, sponsorship, services, contact form, community questions">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="header-container card">
+          <!--Main heading and slogan-->
+          <h1>Kizuna Alliance</h1>
+          <p><em>Standing Together in Humanitarian and Community Engagement</em></p>
+
+           <!--Navigation Menu-->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="service.html">Service</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contactus.html">Contact</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="donate.html">Donate</a>
+            <a href="login.html">Login</a>
+        </nav>
+   </header>
+
+    <main>
+    <!-- Intro Section -->
+    <section id="enquiry-intro">
+      <h2>General Enquiries</h2>
+      <p>If you have questions about our programs, volunteering, or sponsorship opportunities, please use the form below.</p>
+    </section>
+
+    <!-- Enquiry Form Section -->
+    <section id="enquiry-form">
+      <h2>Send Your Enquiry</h2>
+      <form id="enquiry-form-email">
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+         <br>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+27 123 456 789">
+        <br>
+        <label for="type">Enquiry Type:</label>
+        <select id="type" name="type" required>
+          <option value="general">General Question</option>
+          <option value="volunteer">Volunteer Opportunity</option>
+          <option value="sponsor">Become a Sponsor</option>
+        </select>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <br>
+        <button type="submit">Submit Enquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer-container card">
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="https://facebook.com/KizunaAlliance" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://instagram.com/KizunaAlliance" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            </ul>
+        </div>
+        
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="service.html">Service</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contactus.html">Contact</a>
+            <a href="donate.html">Donate</a>
+            <a href="volunteer.html">Volunteer</a>
+              <a href="login.html">Login</a>
+        </nav>
+        <p>&copy; 2023-2026 | Kizuna Alliance.</p>
+    </footer>
+  <script src="header-footer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="emailjs-form.js"></script>
+
+<script>
+document.getElementById('enquiry-form-email').addEventListener('submit', async function(e){
+ e.preventDefault();
+ try {
+   await emailjs.sendForm('Kizunaallience1209','kizuna', this);
+   const emailField=this.querySelector('input[type="email"]');
+   if(emailField){
+      await emailjs.send('Kizunaallience1209','kizuna1',{email: emailField.value,name:(this.name?.value||'')})
+   }
+   alert('Message sent successfully!');
+   this.reset();
+ } catch(err) {
+   console.error(err);
+   alert('Failed to send message.');
+ }
+});
+</script>
+</body>
+</html>
